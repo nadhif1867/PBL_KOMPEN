@@ -2,7 +2,14 @@
 
 use App\Http\Controllers\aDMAlphaController;
 use App\Http\Controllers\aDMKompenController;
+use App\Http\Controllers\aDTAdminController;
+use App\Http\Controllers\aDTDosenController;
+use App\Http\Controllers\aDTTenknisiController;
 use App\Http\Controllers\AlphaController;
+use App\Http\Controllers\aManageBidKomController;
+use App\Http\Controllers\aManageDaMaKomController;
+use App\Http\Controllers\aManageKompenController;
+use App\Http\Controllers\aUpdateKompenController;
 use App\Http\Controllers\aUserADTController;
 use App\Http\Controllers\aUserMahasiswaController;
 use App\Http\Controllers\AuthController;
@@ -60,4 +67,23 @@ Route::get('/aDaftarMahasiswaAlpha', [aDMAlphaController::class, 'index']);
 // Daftar Mahasiswa Kompen
 Route::get('/aDaftarMahasiswaKompen', [aDMKompenController::class, 'index']);
 
-// 
+// Daftar Tugas Dosen
+Route::get('/aDaftarTugasDosen', [aDTDosenController::class, 'index']);
+
+// Daftar Tugas Teknisi
+Route::get('/aDaftarTugasTeknisi', [aDTAdminController::class, 'index']);
+
+// Daftar Tugas Admin
+Route::get('/aDaftarTugasAdmin', [aDTTenknisiController::class, 'index']);
+
+// Manage Bidang Kompetensi
+Route::get('/aManageBidangKompetensi', [aManageBidKomController::class, 'index']);
+
+// Manage Data Mahasiswa Kompen
+Route::get('/aManageDataMahasiswaKompen', [aManageDaMaKomController::class, 'index']);
+
+// Manage Kompen
+Route::get('/aManageKompen', [aManageKompenController::class, 'index']);
+
+// Update Kompen Selesai
+Route::get('/aUpdateKompenSelesai', [aUpdateKompenController::class, 'index']);
