@@ -14,6 +14,12 @@ use App\Http\Controllers\aUserADTController;
 use App\Http\Controllers\aUserMahasiswaController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\aWelcomeController;
+use App\Http\Controllers\dtDMAlphaController;
+use App\Http\Controllers\dtDMKompenController;
+use App\Http\Controllers\dtManageKompenController;
+use App\Http\Controllers\dtUpdateKompenController;
+use App\Http\Controllers\dtWelcomeController;
+use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LihatPilihKompenController;
 use App\Http\Controllers\UpdateKompenSelesaiController;
 use App\Http\Controllers\UpdateProgresTugasKompenController;
@@ -31,6 +37,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Landing Page
+Route::get('/', [LandingPageController::class, 'index']);
+
 // Login
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'postLogin']);
@@ -43,6 +52,9 @@ Route::get('/Mahasiswa', [WelcomeController::class, 'index']);
 
 // Welcome for Admin
 Route::get('/Admin', [aWelcomeController::class, 'index']);
+
+// Welcome for Dosen/Teknisi
+Route::get('/DosenTeknisi', [dtWelcomeController::class, 'index']);
 
 // user as Mahasiswa
 // Lihat dan Pilih Kompen
@@ -87,3 +99,16 @@ Route::get('/aManageKompen', [aManageKompenController::class, 'index']);
 
 // Update Kompen Selesai
 Route::get('/aUpdateKompenSelesai', [aUpdateKompenController::class, 'index']);
+
+// User as Dosen/Teknisi
+// Daftar Mahasiswa Alpha
+Route::get('/dtDaftarMahasiswaAlpha', [dtDMAlphaController::class, 'index']);
+
+// Daftar Mahasiswa Kompen
+Route::get('/dtDaftarMahasiswaKompen', [dtDMKompenController::class, 'index']);
+
+// Manage Kompen
+Route::get('/dtManageKompen', [dtManageKompenController::class, 'index']);
+
+// Update Kompen
+Route::get('/dtUpdateKompen', [dtUpdateKompenController::class, 'index']);
