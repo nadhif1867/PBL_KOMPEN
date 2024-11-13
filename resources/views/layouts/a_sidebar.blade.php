@@ -129,19 +129,19 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ url('/aManageDataMahasiswaKompen') }}" class="nav-link {{ ($activeMenu =='')? 'active' : 'aManageDaMaKom' }} ">
+                <a href="{{ url('/aManageDataMahasiswaKompen') }}" class="nav-link {{ ($activeMenu =='aManageDaMaKom')? 'active' : 'aManageDaMaKom' }} ">
                     <i class="nav-icon fas fa-history"></i>
                     <p>Manage Data Mahasiswa Kompen</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ url('/aManageKompen') }}" class="nav-link {{ ($activeMenu =='')? 'active' : 'aManageKompen' }} ">
+                <a href="{{ url('/aManageKompen') }}" class="nav-link {{ ($activeMenu =='aManageKompen')? 'active' : 'aManageKompen' }} ">
                     <i class="nav-icon fas fa-history"></i>
                     <p>Manage Kompen</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ url('/aUpdateKompenSelesai') }}" class="nav-link {{ ($activeMenu =='')? 'active' : 'aUpdateKompen' }} ">
+                <a href="{{ url('/aUpdateKompenSelesai') }}" class="nav-link {{ ($activeMenu =='aUpdateKompen')? 'active' : 'aUpdateKompen' }} ">
                     <i class="nav-icon fas fa-history"></i>
                     <p>Update Kompen Selesai</p>
                 </a>

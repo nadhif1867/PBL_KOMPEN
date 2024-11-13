@@ -4,7 +4,7 @@
 
 <div class="card">
     <div class="card-body" style="background-color: #28A745; color: white;">
-        Selamat datang mahasiswa "nama"
+        Selamat datang admin "nama"
     </div>
 </div>
 @endsection

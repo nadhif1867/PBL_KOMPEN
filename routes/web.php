@@ -83,10 +83,10 @@ Route::get('/aDaftarMahasiswaKompen', [aDMKompenController::class, 'index']);
 Route::get('/aDaftarTugasDosen', [aDTDosenController::class, 'index']);
 
 // Daftar Tugas Teknisi
-Route::get('/aDaftarTugasTeknisi', [aDTAdminController::class, 'index']);
+Route::get('/aDaftarTugasTeknisi', [aDTTenknisiController::class, 'index']);
 
 // Daftar Tugas Admin
-Route::get('/aDaftarTugasAdmin', [aDTTenknisiController::class, 'index']);
+Route::get('/aDaftarTugasAdmin', [aDTAdminController::class, 'index']);
 
 // Manage Bidang Kompetensi
 Route::get('/aManageBidangKompetensi', [aManageBidKomController::class, 'index']);
