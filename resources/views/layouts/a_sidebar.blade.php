@@ -1,9 +1,59 @@
 <head>
     <style>
-        .sidebar {
-            background-color: #0E1F43;
+        /* Sidebar utama */
+        .main-sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh; /* Gunakan seluruh tinggi layar */
+            width: 250px; /* Lebar sidebar */
+            overflow-y: auto; /* Gulir hanya isi sidebar */
+            background-color: #0E1F43; /* Warna biru tua */
+            border-right: 2px solid #1A3B6D; /* Aksen pada tepi sidebar */
         }
-    </style>
+    
+        /* Atur posisi brand logo */
+        .brand-link {
+            position: sticky; /* Tetap berada di atas sidebar */
+            top: 0;
+            z-index: 1000;
+            background-color: #1A3B6D; /* Warna biru yang sedikit lebih terang untuk logo */
+            color: #ffffff; /* Teks putih untuk kontras */
+            padding: 15px;
+            text-align: center;
+            font-weight: bold; /* Teks lebih tegas */
+            border-bottom: 2px solid #2C4F8D; /* Garis bawah sebagai aksen */
+        }
+    
+        /* Kontainer utama (konten) */
+        .content-wrapper {
+            margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
+            min-height: 100vh; /* Pastikan konten mencakup tinggi penuh */
+            background-color: #F4F6F9; /* Warna latar belakang konten */
+            padding: 20px; /* Berikan padding untuk ruang */
+        }
+    
+        /* Warna body */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Source Sans Pro', sans-serif; /* Gunakan font modern */
+        }
+    
+        /* Gaya untuk teks atau elemen tambahan di sidebar */
+        .sidebar-item {
+            color: #ffffff; /* Teks putih di sidebar */
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none; /* Hapus garis bawah pada tautan */
+        }
+    
+        .sidebar-item:hover {
+            background-color: #2C4F8D; /* Warna biru terang saat hover */
+            color: #ffffff; /* Teks tetap putih */
+        }
+    </style>    
+    
 </head>
 <div class="sidebar">
     <!-- Profile Menu -->
@@ -30,6 +80,12 @@
 'active' : '' }} ">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>Dashboard</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url('/level') }}" class="nav-link {{ ($activeMenu =='level')? 'active' : 'level' }} ">
+                    <i class="nav-icon fas fa-history"></i>
+                    <p>Level User</p>
                 </a>
             </li>
             <li class="nav-item">
